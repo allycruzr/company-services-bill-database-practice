@@ -1,5 +1,5 @@
 # Practical work of continuous assesstment - U. Lusófona 2019 - Bases de Dados - Prof. José Aser
-![alt text](https://github.com/acr1618/company-services-bill-database-practice/blob/master/Jose_Aser_PW_BD.png)
+![alt text](https://github.com/acr1618/company-services-bill-database-practice/blob/master/diagram.png)
 
 - Create all model tables with their NN, PK, UK and CK constraints, considering:
 
