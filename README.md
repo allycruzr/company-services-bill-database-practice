@@ -56,3 +56,7 @@
 - Show which customers will pay for services in October above the monthly referral cost for this contract;
 
 - The total payable on an invoice is the sum of its invoice details. Write a procedure that will be stored inside the DB and that, receiving a year and a month, updates the total value of all invoices issued in that year and month. The total value for each invoice is the sum of all its detail lines.
+
+- Authors
+  - Allyson da Cruz Rodrigues
+  - Bernardo Amorim
