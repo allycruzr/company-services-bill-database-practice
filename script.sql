@@ -620,5 +620,39 @@ WHERE VALOR_A_PAGAR_OUTUBRO > VALOR_REFERENCIA;
 
 
 -----------------------------------------------------------
+                    
+SET SERVEROUTPUT ON;
+CREATE OR REPLACE PROCEDURE Update_Bill_Year_Month (this_year in NUMBER, this_month in NUMBER) IS
 
+updates_num NUMBER;
+BEGIN
+  UPDATE FATURA f 
+    SET f.VALOR_TOTAL = (
+      SELECT SUM(df.VALOR) FROM DETALHE_FATURA df 
+      WHERE f.ID_FATURA = df.ID_FATURA 
+      AND EXTRACT(YEAR FROM f.DATA_EMISSAO) = this_year
+      AND EXTRACT(MONTH FROM f.DATA_EMISSAO) = this_month 
+    ) 
+    WHERE EXISTS (
+      SELECT * FROM DETALHE_FATURA df 
+      WHERE f.ID_FATURA = df.ID_FATURA 
+      AND EXTRACT(month FROM f.DATA_EMISSAO) = this_month 
+      AND EXTRACT(year FROM f.DATA_EMISSAO) = this_year
+    );
+    updates_num := SQL%rowcount; 
+    IF updates_num > 0 THEN
+      dbms_output.put_line('Good: ' || updates_num || ' contracts in ' || (this_month) || '/' || this_year  || ' have been updated.' );
+    ELSE 
+     dbms_output.put_line('Warning: No contracts have been updated. Check inserted date.');
+    END IF;
+COMMIT;
+END;
+/
+show errors;
+SELECT * FROM user_errors;
+ 
+BEGIN
+Update_Bill_Year_Month(2000,10);
+END;
+COMMIT;
 
