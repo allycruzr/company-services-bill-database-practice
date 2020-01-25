@@ -1,4 +1,4 @@
-# Practical work of continuous assesstment - U. Lusófona 2019 - Bases de Dados - Prof. José Aser
+# Practical work of continuous assesstment - U. Lusófona 2019 - Databases - Prof. José Aser
 ![alt text](https://github.com/acr1618/company-services-bill-database-practice/blob/master/diagram.png)
 
 - Create all model tables with their NN, PK, UK and CK constraints, considering:
@@ -56,14 +56,3 @@
 - Show which customers will pay for services in October above the monthly referral cost for this contract;
 
 - The total payable on an invoice is the sum of its invoice details. Write a procedure that will be stored inside the DB and that, receiving a year and a month, updates the total value of all invoices issued in that year and month. The total value for each invoice is the sum of all its detail lines.
-
-
-
-
-
-
-
-
-
-
-
