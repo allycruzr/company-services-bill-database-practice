@@ -97,7 +97,7 @@ SELECT * FROM user_errors;
 /*Commands for test, use and verify procedure execution*/
 
 BEGIN
-Update_Fatura_Year_Month(2015,10);
+Update_Fatura_Year_Month(2019,2);
 END;
 
 COMMIT;
