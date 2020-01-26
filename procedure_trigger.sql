@@ -21,7 +21,7 @@ CREATE OR REPLACE PROCEDURE Update_Fatura_Year_Month (this_year in NUMBER, this_
 
 invalid_year EXCEPTION;
 invalid_month EXCEPTION;
-invalid_date_format EXCEPTION;
+/*invalid_date_format EXCEPTION;*/ -- Not been handle yet
 /*
 ora_short_date_exception EXCEPTION; -- ORA-01840: input value not long enough for date format
 PRAGMA EXCEPTION_INIT (ora_short_date_exception, -06512 );
