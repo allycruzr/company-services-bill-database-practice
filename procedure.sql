@@ -1,7 +1,3 @@
-/*Authors*/
--- Allyson Rodrigues
--- Bernardo Amorim
-
 SET SERVEROUTPUT ON;
 
 CREATE OR REPLACE TRIGGER Updating_Fatura
